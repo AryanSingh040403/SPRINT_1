@@ -40,8 +40,6 @@ def build_rag_database():
     )
 
     # 4. Build and Save the FAISS Vector Database
-    print("🏗️ Building FAISS Vector Database...")
-    vector_store = FAISS.from_documents(chunks, embeddings)
     
     # Ensure the models directory exists so we don't throw a folder error
     os.makedirs(os.path.dirname(FAISS_SAVE_PATH), exist_ok=True)
